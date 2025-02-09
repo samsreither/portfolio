@@ -9,21 +9,23 @@ export const Contact = () => {
     message: "",
   });
 
-  const SERVICE_ID = "service_kinhkj5";
-  const TEMPLATE_ID = "template_55j3k0e";
-  const PUBLIC_KEY = "lZ-5fzlGTNtFPkK-f";
-
   const handleSubmit = (e) => {
     e.preventDefault();
+
     emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        e.target,
+        import.meta.env.VITE_PUBLIC_KEY,
+      )
       .then((result) => {
         alert("Message Sent!");
-        setFormData({name: "", email: "", message: ""})
+        setFormData({ name: "", email: "", message: "" });
       })
       .catch(() => alert("Whoops. Something went wrong. Please try again."));
   };
-  
+
   return (
     <section
       id="contact"
