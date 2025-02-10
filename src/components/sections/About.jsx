@@ -2,7 +2,7 @@ import { RevealOnScroll } from "../RevealOnScroll";
 
 export const About = () => {
   const frontendSkills = ["React", "Vue", "Typescript", "TailwindCSS"];
-  const backendSkills = ["Node.js", "Python", "AWS", "MongoDB", "GraphQL"];
+  const backendSkills = ["Node.js", "Express", "Python", "AWS", "MongoDB"];
 
   return (
     <section
@@ -16,8 +16,7 @@ export const About = () => {
           </h2>
           <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
             <p className="text-gray-300 mb-6">
-              Developer with expertise building web apps. Former Math Teacher &
-              Actuary.
+              I got into Software because I like building and innovating. Outside of work, I like sports, anything that's outside, traveling out of the country, and reading books. 
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
